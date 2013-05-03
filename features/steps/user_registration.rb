@@ -1,12 +1,24 @@
 class Spinach::Features::UserRegistration < Spinach::FeatureSteps
 
+  require_relative 'abstract/utility'
+  include Utility::Navigation
+  include Utility::Users
+
+  ###########
+  ## Given ##
+  ###########
+
   step 'I am a domestic guest user' do
-    @user = User.new(:type => :on_the_fly, :country => :domestic)
+    create_new_domestic_guest_user
   end
 
   step 'I navigate to onlineAHA' do
-    @browser = $browser
+    open_browser_and_navigate_to_site
   end
+
+  ##########
+  ## When ##
+  ##########
 
   step 'I click to Sign Up on the Home Page' do
     visit HomePage do |page|
@@ -19,6 +31,10 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   step 'I fill out the registration form' do
     pending 'step not implemented'
   end
+
+  ##########
+  ## Then ##
+  ##########
 
   step 'I should see that I am logged in' do
     pending 'step not implemented'
