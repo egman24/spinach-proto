@@ -24,8 +24,10 @@ end
 # feature_data is a hash of the parsed scenario data
 Spinach.hooks.before_scenario do |scenario|
   #binding.pry
+  $browser               = Watir::Browser.new $BROWSER_TYPE
+  $screen.browser        = $browser
   $screen.scenario_title = scenario.name
-  $browser = Watir::Browser.new $BROWSER_TYPE
+  $screen.create_subdirectories
 end
 
 # Runs before every step execution
@@ -72,4 +74,9 @@ end
 # status is true when the run is successful, false otherwise
 Spinach.hooks.after_run do |status|
   #binding.pry
+  STDOUT.puts ""
+  STDOUT.puts "==> Would you like the report to be generated with this sessions screenshots?"
+  #TODO: when finished with steps below, encapsulate this into one clean method for the hooks run
+  #TODO: create CLI reponse prompt to decide to creat the report now or later (if later, give the command to do so)
+  #TODO: add methods or rake task to setup proper report then output the url (include ssh location to scp to automatically?)
 end

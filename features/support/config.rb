@@ -12,9 +12,9 @@ module ApplicationConfig
 
   #Screenshots
 
-  $SCREENSHOT_DIRECTORY         = 'uat_report/images/screenshots'
-  $SCREENSHOT_ARCHIVE           = 'tmp_resources/screenshots_archive'
-  $SCREENSHOT_ARCHIVE_DIRECTORY = "tmp_resources/screenshots_archive/#{Time.now.strftime('%Y-%m-%d_%H%M%S')}"
+  $SCREENSHOT_DIRECTORY         = 'report/images/screenshots'
+  $SCREENSHOT_ARCHIVE           = 'tmp/screenshots_archive'
+  $SCREENSHOT_ARCHIVE_DIRECTORY = "tmp/screenshots_archive/#{Time.now.strftime('%Y-%m-%d_%H%M%S')}"
 
   #Registration
 

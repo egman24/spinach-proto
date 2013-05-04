@@ -2,7 +2,7 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
 
   require_relative 'abstract/utility'
   include Utility::Navigation
-  include Utility::Users
+  include Utility::Dependencies::Users
   include Utility::Expectations::Locations
   include Utility::Expectations::Messages
 
@@ -11,11 +11,11 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   ###########
 
   step 'I am a domestic guest user' do
-    create_new_domestic_guest_user #Utility::Users
+    create_new_domestic_guest_user #Utility::Dependencies::Users
   end
 
   step 'I am an international guest user' do
-    create_new_international_guest_user #Utility::Users
+    create_new_international_guest_user #Utility::Dependencies::Users
   end
 
   step 'I navigate to onlineAHA' do
@@ -28,15 +28,15 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
 
   step 'I click to Sign Up on the Home Page' do
     visit HomePage do |page|
-      #$screen.snapshot
+      $screen.snapshot
       page.click_to_sign_up
-      #$screen.snapshot
+      $screen.snapshot
     end
   end
 
   step 'I fill out the registration form' do
     on RegistrationPage do |page|
-      #$screen.snapshot
+      $screen.snapshot
       page.enter_sign_up_values(:country               => @user.country,
                                 :email                 => @user.email,
                                 :email_confirmation    => @user.email,
@@ -44,9 +44,9 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
                                 :password_confirmation => @user.password,
                                 :first_name            => @user.first_name,
                                 :last_name             => @user.last_name)
-      #$screen.snapshot
+      $screen.snapshot
       page.sign_up
-      #$screen.snapshot
+      $screen.snapshot
     end
   end
 
@@ -55,7 +55,8 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   ##########
 
   step 'I should see that I am logged in' do
-    pending 'step not implemented'
+    $screen.snapshot
+    expect(@browser.text.include? "Welcome, #{@user.first_name} #{@user.last_name}").to be_true
   end
 
   step 'I should be on the My Courses page' do

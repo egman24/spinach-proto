@@ -1,11 +1,22 @@
 class RegistrationPage
   include PageObject
 
+  #########################
+  ## Setup page identity ##
+  #########################
+
   page_url( @@url = "#{$WEBSITE}/users/sign_up" )
 
   def self.url
     @@url
   end
+
+  #############################
+  ## Add in modular elements ##
+  #############################
+
+  require_relative 'modules/MainHeaderNavigation'
+  include MainHeaderNavigation
 
   ############################
   ## Page Element Inventory ##
@@ -21,6 +32,9 @@ class RegistrationPage
    text_field(:enter_password,                  :id => 'user_password'                 )
    text_field(:enter_password_confirmation,     :id => 'user_password_confirmation'    )
 
+  ###########################
+  ## Page Action Inventory ##
+  ###########################
 
   def enter_sign_up_values(args={})
     self.select_country              = args[:country]

@@ -1,11 +1,22 @@
 class HomePage
   include PageObject
 
+  #########################
+  ## Setup page identity ##
+  #########################
+
   page_url( @@url = "#{$WEBSITE}/" )
 
   def self.url
     @@url
   end
+
+  #############################
+  ## Add in modular elements ##
+  #############################
+
+  require_relative 'modules/MainHeaderNavigation'
+  include MainHeaderNavigation
 
   ############################
   ## Page Element Inventory ##
@@ -15,6 +26,10 @@ class HomePage
   text_field(:password,          :id => 'user_password')
       button(:submit_sign_in, :value => 'Sign In')
         link(:click_sign_up,   :text => 'Sign Up', :href => "#{$WEBSITE}/users/sign_up")
+
+  ###########################
+  ## Page Action Inventory ##
+  ###########################
 
   def enter_sign_in_values(args={})
     self.email    = args[:email]
