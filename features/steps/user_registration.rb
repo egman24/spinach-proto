@@ -59,7 +59,7 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   end
 
   step 'I should be on the My Courses page' do
-    pending 'NOTE: Implement this behavior'#on_my_courses_page #Utility::Expectations::Locations
+    pending on_my_courses_page #Utility::Expectations::Locations
   end
 
   step 'I should be greeted with a flash message' do
@@ -67,18 +67,18 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   end
 
   step 'My account should be learner type' do
-    pending 'step not implemented'
+    pending 'Should this be seperate test? if so how can i reference that this is part of the registration cascade'
   end
 
   step 'I should have a domestic profile' do
-    pending 'step not implemented'
+    pending 'Should this be seperate test? if so how can i reference that this is part of the registration cascade'
   end
 
   step 'I should have an international profile' do
-    pending 'step not implemented'
+    pending 'Should this be seperate test? if so how can i reference that this is part of the registration cascade'
   end
 
   step 'I should have received a welcome email' do
-    pending 'step not implemented'
+    pending 'Should this be seperate test? if so how can i reference that this is part of the registration cascade'
   end
 end
