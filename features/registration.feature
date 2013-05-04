@@ -13,7 +13,7 @@ Scenario: Registration via Home Page login widget (domestic)
   When I click to Sign Up on the Home Page
   And I fill out the registration form
   Then I should see that I am logged in
-  And I should be on the "/courses" page
+  And I should be on the My Courses page
   And I should be greeted with a flash message
   And My account should be learner type
   And I should have a domestic profile
@@ -25,7 +25,7 @@ Scenario: Registration via Home Page login widget (international)
   When I click to Sign Up on the Home Page
   And I fill out the registration form
   Then I should see that I am logged in
-  And I should be on the "/courses" page
+  And I should be on the My Courses page
   And I should be greeted with a flash message
   And My account should be learner type
   And I should have an international profile

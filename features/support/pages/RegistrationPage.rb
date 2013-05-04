@@ -1,8 +1,11 @@
 class RegistrationPage
   include PageObject
 
-  url = "#{$WEBSITE}/users/sign_up"
-  page_url(url)
+  page_url( @@url = "#{$WEBSITE}/users/sign_up" )
+
+  def self.url
+    @@url
+  end
 
   ############################
   ## Page Element Inventory ##

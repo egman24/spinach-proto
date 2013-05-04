@@ -1,8 +1,11 @@
 class HomePage
   include PageObject
 
-  url =  "#{$WEBSITE}/"
-  page_url(url)
+  page_url( @@url = "#{$WEBSITE}/" )
+
+  def self.url
+    @@url
+  end
 
   ############################
   ## Page Element Inventory ##
