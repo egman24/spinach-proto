@@ -1,3 +1,4 @@
 tmp/
 report/
+features/support/config_secure.rb
 chromedriver.log

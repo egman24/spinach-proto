@@ -1,10 +1,17 @@
 module ApplicationConfig
+  require_relative 'config_secure'
 
   #General
 
-  $WEBSITE      = "http://0.0.0.0:3000"      # "http://qa.aha.scitent.com"
-  $EXTERNAL_LMS = "http://scitentmoodle.com"
-  $BROWSER_TYPE = :chrome                    # :firefox, :ie, :safari...
+  $BROWSER_TYPE      = :chrome                    # :firefox, :ie, :safari...
+  $WEBSITE           = "http://0.0.0.0:3000"      # "http://qa.aha.scitent.com"
+  $EXTERNAL_LMS      = "http://scitentmoodle.com"
+  $DATABASE          = 'qa'
+  $DATABASE_HOST     = '0.0.0.0'
+  $DATABASE_USERNAME = $QA_USERNAME # via ApplicationConfigSecure
+  $DATABASE_PASSWORD = $QA_PASSWORD # via ApplicationConfigSecure
+  $FILESYSTEM        = '../../'
+
 
   #Dependencies (uat/features/support/dependencies)
 

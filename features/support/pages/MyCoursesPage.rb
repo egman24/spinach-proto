@@ -16,7 +16,6 @@ class MyCoursesPage
   #############################
 
   require_relative 'modules/MainHeaderNavigation'
-  include MainHeaderNavigation
 
   ############################
   ## Page Element Inventory ##
