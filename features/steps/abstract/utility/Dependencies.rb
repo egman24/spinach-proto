@@ -1,3 +1,3 @@
 module Utility::Dependencies
-  require_relative 'dependencies/Users'
+  require_rel 'dependencies'
 end

@@ -5,6 +5,7 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   include Utility::Dependencies::Users
   include Utility::Expectations::Locations
   include Utility::Expectations::Messages
+  include Utility::Expectations::Roles
 
   ###########
   ## Given ##
@@ -47,7 +48,6 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
       $screen.snapshot
       page.sign_up
       $screen.snapshot
-      binding.pry
     end
   end
 
@@ -61,7 +61,7 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   end
 
   step 'I should be on the My Courses page' do
-    pending on_my_courses_page #Utility::Expectations::Locations
+    pending 'whoa'#on_my_courses_page #Utility::Expectations::Locations
   end
 
   step 'I should be greeted with a flash message' do
@@ -69,7 +69,7 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
   end
 
   step 'My account should be learner type' do
-    pending 'Should this be seperate test? if so how can i reference that this is part of the registration cascade'
+    user_is_learner_role(@user.email) #Utility::Expectations::Roles
   end
 
   step 'I should have a domestic profile' do

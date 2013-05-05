@@ -1,0 +1,90 @@
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activemodel (3.2.12)
+      activesupport (= 3.2.12)
+      builder (~> 3.0.0)
+    activerecord (3.2.12)
+      activemodel (= 3.2.12)
+      activesupport (= 3.2.12)
+      arel (~> 3.0.2)
+      tzinfo (~> 0.3.29)
+    activesupport (3.2.12)
+      i18n (~> 0.6)
+      multi_json (~> 1.0)
+    arel (3.0.2)
+    builder (3.0.4)
+    childprocess (0.3.9)
+      ffi (~> 1.0, >= 1.0.11)
+    coderay (1.0.9)
+    colorize (0.5.8)
+    columnize (0.3.6)
+    data_magic (0.14)
+      faker (>= 1.1.2)
+      yml_reader (>= 0.2)
+    debugger (1.5.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.0)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.0)
+    diff-lcs (1.2.4)
+    faker (1.1.2)
+      i18n (~> 0.5)
+    ffi (1.8.1)
+    gherkin-ruby (0.3.0)
+    i18n (0.6.4)
+    method_source (0.8.1)
+    multi_json (1.7.2)
+    mysql2 (0.3.11)
+    page-object (0.8.10)
+      page_navigation (>= 0.8)
+      selenium-webdriver (>= 2.32.1)
+      watir-webdriver (>= 0.6.4)
+    page_navigation (0.9)
+      data_magic (>= 0.14)
+    pry (0.9.12.1)
+      coderay (~> 1.0.5)
+      method_source (~> 0.8)
+      slop (~> 3.4)
+    pry-debugger (0.2.2)
+      debugger (~> 1.3)
+      pry (~> 0.9.10)
+    require_all (1.2.1)
+    rspec (2.13.0)
+      rspec-core (~> 2.13.0)
+      rspec-expectations (~> 2.13.0)
+      rspec-mocks (~> 2.13.0)
+    rspec-core (2.13.1)
+    rspec-expectations (2.13.0)
+      diff-lcs (>= 1.1.3, < 2.0)
+    rspec-mocks (2.13.1)
+    rubyzip (0.9.9)
+    selenium-webdriver (2.32.1)
+      childprocess (>= 0.2.5)
+      multi_json (~> 1.0)
+      rubyzip
+      websocket (~> 1.0.4)
+    slop (3.4.4)
+    spinach (0.8.2)
+      colorize (= 0.5.8)
+      gherkin-ruby (~> 0.3.0)
+    tzinfo (0.3.37)
+    watir-webdriver (0.6.4)
+      selenium-webdriver (>= 2.18.0)
+    websocket (1.0.7)
+    yml_reader (0.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  activerecord
+  faker
+  mysql2
+  page-object
+  pry-debugger
+  require_all
+  rspec
+  spinach
+  watir-webdriver
