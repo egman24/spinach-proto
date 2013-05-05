@@ -47,6 +47,7 @@ class Spinach::Features::UserRegistration < Spinach::FeatureSteps
       $screen.snapshot
       page.sign_up
       $screen.snapshot
+      binding.pry
     end
   end
 

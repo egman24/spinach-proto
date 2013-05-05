@@ -9,5 +9,9 @@ ActiveRecord::Base.establish_connection(
     :pool      => 5,
     :username  => $DATABASE_USERNAME,
     :password  => $DATABASE_PASSWORD,
-    :host      => $DATABASE_HOST
-)
+    :host      => $DATABASE_HOST)
+
+
+
+#require_rel '../../../scidea/scidea-core/app/models'
+#require_rel '../../../scidea/scidea-aha/app/models'
