@@ -1,4 +1,4 @@
 tmp/
-report/
+report/uat/
 features/support/config_secure.rb
 chromedriver.log

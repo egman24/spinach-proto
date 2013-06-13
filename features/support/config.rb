@@ -3,23 +3,23 @@ module ApplicationConfig
 
   #General
 
-  $BROWSER_TYPE      = :chrome                    # :firefox, :ie, :safari...
-  $WEBSITE           = "http://0.0.0.0:3000"      # "http://qa.aha.scitent.com"
+  $BROWSER_TYPE      = :chrome                              # :firefox, :ie, :safari...
+  $WEBSITE           = "http://0.0.0.0:3000"                # "http://qa.aha.scitent.com"
   $EXTERNAL_LMS      = "http://scitentmoodle.com"
-  $DATABASE          = 'qa'
-  $DATABASE_HOST     = '0.0.0.0'
-  $DATABASE_USERNAME = $QA_USERNAME # via ApplicationConfigSecure
-  $DATABASE_PASSWORD = $QA_PASSWORD # via ApplicationConfigSecure
-  $FILESYSTEM        = '../../'
+  $DATABASE          = 'qa'                                 # database name
+  $DATABASE_HOST     = '0.0.0.0'                            # local database; could be remote application database like scidea@aha.scitent.com...
+  $DATABASE_USERNAME = $QA_USERNAME                         # via ApplicationConfigSecure (file in .gitignore)
+  $DATABASE_PASSWORD = $QA_PASSWORD                         # via ApplicationConfigSecure (file in .gitignore)
+  $FILESYSTEM        = '../scidea/scidea-aha/public/system' # relatively placed near application's filesystem; may need rsync/ssh if testing remote application
 
 
   #Dependencies (uat/features/support/dependencies)
 
-  $PACKAGES_AICC                = './support/dependencies/assets/packages/aicc/QuickTestCourse.zip'
+  $PACKAGE_AICC                = './support/dependencies/assets/packages/aicc/QuickTestCourse.zip'
 
   #Screenshots
 
-  $SCREENSHOT_DIRECTORY         = 'report/images/screenshots'
+  $SCREENSHOT_DIRECTORY         = 'report/uat/screenshots'
   $SCREENSHOT_ARCHIVE           = 'tmp/screenshots_archive'
   $SCREENSHOT_ARCHIVE_DIRECTORY = "tmp/screenshots_archive/#{Time.now.strftime('%Y-%m-%d_%H%M%S')}"
 

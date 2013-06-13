@@ -1,0 +1,22 @@
+\
+<!-- BEGIN #{file_name} -->
+\
+%div.content-border{ :id => "#{file_name}", :style => 'display:none'}
+  %p<
+    %span.feature-title= feature_name
+  %p<
+    %span.topics Topics:&nbsp;
+    = topics.join(', ')
+
+  <span class='feature-description'>
+
+  - @elements.each do |element|
+    = Haml::Engine.new(element[:file]).render(self, element[:value])
+
+\
+<!-- END #{file_name} -->
+\
+
+
+
+

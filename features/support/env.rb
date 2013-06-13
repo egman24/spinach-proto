@@ -1,3 +1,7 @@
+#Rails environment references: https://github.com/codegram/spinach-rails#usage
+#ENV['RAILS_ENV'] = 'production'
+#require_relative '../../../scidea/scidea-aha/config/environment'
+
 require 'rspec-expectations'           # https://github.com/rspec/rspec-expectations
 require 'page-object'
 require 'faker'

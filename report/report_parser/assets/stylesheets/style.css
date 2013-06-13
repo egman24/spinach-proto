@@ -1,0 +1,272 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    font: 10px
+    font-family:sans-serif
+    font-size: 10px;
+    background: rgb(210,233,250);
+}
+*
+{
+    margin: 0 auto 0 auto;
+    text-align:left;}
+
+#container
+{
+    display: block;
+    height:auto;
+    position: relative;
+    width: 1200px;
+}
+
+#header
+{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+    height:85px;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    border-bottom-style: solid;
+    border-bottom-color: #ff3535;
+}
+
+#header h1
+{
+    position:absolute;
+    text-align:left;
+    color:rgb(255, 53, 53);
+    font-size:38px;
+    color:rgb(255, 53, 53);
+    left:14px;
+    top:20px;
+}
+
+#logo
+{
+    position:absolute;
+    left:110px;
+    top:8px;
+    padding: 8px;
+    border-right:solid thin lightgray;
+
+}
+
+#header h2
+{
+    position:absolute;
+    text-align:left;
+    left:425px;
+    top:23px;
+    width:600px;
+    font-size: 200%;
+    font: Georgia;
+}
+
+.content-border
+{
+    border:2px solid thin darkgrey;
+    padding:20px 20px;
+    background:#ffffff;
+    border-radius:25px;
+
+    border-shadow: red 2px 2px 2px;
+
+    -moz-box-shadow: 6px 6px 5px #CCC;
+    -webkit-box-shadow: 6px 6px 5px #CCC;
+    box-shadow: 6px 6px 5px #CCC;
+}
+
+#content
+{
+    position:absolute;
+    left:250px;
+    display:block;
+    float:left;
+    width:auto;
+    height:1000px; /*this used to be 'auto' but caused menu movements when some didnt fill the full page*/
+    margin-top: 30px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-bottom:5px;
+}
+
+#leftmenu
+{
+    position: absolute;
+    left:1px;
+    margin-top:30px;
+    width:auto;
+    float:left;
+}
+
+#leftmenu_main
+{
+    width:230px;
+    height:auto;
+
+    border:1px solid gray;
+    padding:5px 5px;
+    background:rgb(158, 199, 250);
+    border-radius:25px;
+
+    border-shadow: red 1px 1px 1px;
+
+    -moz-box-shadow: 2px 2px 1px #CCC;
+    -webkit-box-shadow: 2px 2px 1px #CCC;
+    box-shadow: 2px 2px 1px #CCC;
+
+}
+
+#leftmenu_main ul
+{
+    list-style: none;
+    padding: 0px;
+    width:204px;
+}
+
+
+#leftmenu_main h3
+{
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 100;
+    list-style: none;
+    padding: 0px;
+    width:204px;
+    padding-left:10px;
+    padding-bottom:14px;
+}
+
+#leftmenu_main ul li
+{
+    list-style: none;
+    padding: 0px;
+    width:204px;
+    text-align:left;
+}
+
+#leftmenu_main ul li a, #leftmenu_main ul li a:visited
+{
+    display:block;
+    list-style: none;
+    padding: 0px;
+    width:492px;
+    padding-left:6px;
+    height:20px;
+    text-align:left;
+    color:#ff3535;
+    text-decoration:none;
+    font-size:15px;
+}
+
+#leftmenu_main ul li a:hover
+{
+    color:#f60000;
+}
+
+
+html, body {
+    text-align: center;
+}
+p {text-align: left;}
+
+a.tooltip {outline:none;color:royalblue;}
+a.tooltip strong {line-height:30px;}
+a.tooltip:hover {text-decoration:none;}
+a.tooltip span {
+    z-index:10;display:none; padding:14px 20px;
+    margin-top:-30px; margin-left:28px;
+    width:240px; line-height:16px;
+}
+a.tooltip:hover span{
+    display:inline; position:absolute; color:#111;
+    border:1px solid #DCA; background:#fffAF0;}
+.callout {z-index:20;position:absolute;top:30px;border:0;left:-12px;}
+
+/*CSS3 extras*/
+a.tooltip span
+{
+    border-radius:4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+
+    -moz-box-shadow: 5px 5px 8px #CCC;
+    -webkit-box-shadow: 5px 5px 8px #CCC;
+    box-shadow: 5px 5px 8px #CCC;
+}
+
+span.feature {
+    font-size: 25px;
+}
+
+span.feature-title {
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size:30px;
+    font-weight:900;
+    color: #ff3535;
+}
+
+span.feature-description {
+    font: italic 15px Georgia, serif;
+    color: dimgrey;
+
+}
+
+span.topics {
+    font-weight:700;
+
+}
+
+span.scenario {
+    font-weight: 900;
+    color: darkorange;
+
+}
+
+span.given {
+    font-style: italic;
+    color: darkorange;
+    margin-left: 10px;
+}
+
+span.when {
+    font-style: italic;
+    color: darkorange;
+    margin-left: 10px;
+}
+
+span.and {
+    font-style: italic;
+    color: darkorange;
+    margin-left: 10px;
+}
+
+span.then {
+    font-style: italic;
+    color: darkorange;
+    margin-left: 10px;
+}
+
+span.note {
+    color: #ff3535;
+    margin-left: 10px;
+    text-align: center;
+}
+
+a.back_link {
+    color:royalblue;
+    position:absolute;
+    left:1520px;
+    top: 33px;
+    width:20px;
+    text-align:left;
+    font-size: 75%;
+    font: Georgia;
+}
+
+.galleria {
+    width: 1150px;
+    height: 887px;
+    background: #000;
+}

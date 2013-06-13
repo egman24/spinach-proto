@@ -1,0 +1,14 @@
+- require './screenshot_parser.rb'
+
+</span>
+<hr>
+<br>
+-# Creates new files for each feature's screenshots
+- feature = feature_name.gsub(/ /, '_')
+- screenshot_parser = ScreenshotParser.new(feature, scenario_names)
+- engine            = Haml::Engine.new(screenshot_parser.template)
+- output_file       = File.new("../uat/#{feature}_screenshots.html", "w+")
+- output_file.puts(engine.render(screenshot_parser))
+%a.gallery{ :href => "./#{feature}_screenshots.html" }Images!
+<br>
+<br>

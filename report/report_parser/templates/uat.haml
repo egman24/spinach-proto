@@ -1,0 +1,46 @@
+!!! 5
+%html
+  %head
+
+    %title= "UAT"
+
+    %link{ :rel  => 'stylesheet', :type => 'text/css', :href => './stylesheets/style.css'}
+
+    %script{ :type => 'text/javascript', :src => './javascripts/jquery.js'}
+    %script{ :type => 'text/javascript', :src => './javascripts/div_toggle.js'}
+
+    - parser = ReportParser.new
+
+  %body
+
+    #header
+      %a{ :href => 'http://aha.phx.scitent.com'}<
+        %img#logo{ :src => './images/online_aha_logo.gif'}
+
+      %h2= 'User Acceptance Test Cases'
+
+    #container
+      #leftmenu
+        #leftmenu_main
+          %h3= 'Features'
+          %ul
+            - parser.feature_identifiers.each do |file_name, feature_title|
+              %li<
+                %a{ :href => '', :'data-toggle' => "##{file_name}"}#{feature_title}
+      #content
+        #content_main
+          - parser.feature_files.each do |file|
+            - feature = FeatureParser.new(file)
+            = Haml::Engine.new(parser.feature_template_file).render(feature)
+
+
+
+
+
+
+
+
+
+
+
+

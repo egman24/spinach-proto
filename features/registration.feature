@@ -17,7 +17,6 @@ Scenario: Registration via Home Page login widget (domestic)
   And I should be greeted with a flash message
   And My account should be learner type
   And I should have a domestic profile
-  And I should have received a welcome email
 
 Scenario: Registration via Home Page login widget (international)
   Given I am an international guest user
@@ -29,4 +28,3 @@ Scenario: Registration via Home Page login widget (international)
   And I should be greeted with a flash message
   And My account should be learner type
   And I should have an international profile
-  And I should have received a welcome email

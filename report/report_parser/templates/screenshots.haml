@@ -1,0 +1,35 @@
+!!! 5
+%html
+  %head
+
+    %title= "UAT | #{feature_name.capitalize.gsub(/_/, ' ')} Screenshots"
+
+    %link{ :rel  => 'stylesheet', :type => 'text/css', :href => './stylesheets/style.css'}
+    %link{ :rel  => 'stylesheet', :type => 'text/css', :href => './stylesheets/galleria/galleria.classic.css'}
+
+    %script{ :type => 'text/javascript', :src => './javascripts/jquery.js'}
+    %script{ :type => 'text/javascript', :src => './javascripts/galleria/galleria.js'}
+
+  %body
+
+    #header
+      %a{ :href => 'http://aha.phx.scitent.com'}<
+        %img#logo{ :src => './images/online_aha_logo.gif'}
+
+      %h2= "#{feature_name.capitalize.gsub(/_/, ' ')}"
+
+      %a.back_link{ :href => './uat.html'}Back
+
+    %div.galleria
+      - scenario_names.each do |name|
+        - Dir.glob("./../uat/screenshots/#{feature_name}/#{name}/*.png") do |image|
+          %img{ :src => "./screenshots/#{feature_name}/#{name}/#{File.basename image}" }
+
+
+    :javascript
+      Galleria.loadTheme('./javascripts/galleria/galleria.classic.js');
+      Galleria.run('.galleria').galleria({
+        width: 750,
+        height: 487
+        //Change these values in ./stylesheets/style.css
+      });
