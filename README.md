@@ -2,6 +2,11 @@
 
 - To create step implementation methods run ```spinach --generate```.  New files will be generated in /steps/*
 
+#### Environment dependencies
+
+- Start all environment dependencies (project specific) ```bundle exec rake sunspot:solr:start RAILS_ENV=production```
+- If using localhost with application, start application server with (project specific) commands ```sci-aha && rake assets:precompile && rake db:migrate && rails s -e production```
+
 #### Spinach test suite commands
 
 - To run test suite use ```cd /<home directory of the project> && spinach features/<optional specific feature with tab autocomplete>```
@@ -9,6 +14,8 @@
 #### Report parser commands
 
 - To run the report parser use ```cd /<home directory of the project>/report/report_parser/ && ruby report_parser.rb```
+
+<hr>
 
 #### TODO
 - Build rake task to create necessary file structure that is not brought down with the git pull: report, report/images, report/images/screenshots, tmp, etc...
