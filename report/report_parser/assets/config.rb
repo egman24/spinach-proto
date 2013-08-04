@@ -1,3 +1,7 @@
+##################################
+### Compass configuration file ###
+##################################
+
 # Require any additional compass plugins here.
 
 # Set this to the root of your project when deployed:
@@ -28,7 +32,7 @@ javascripts_dir = "javascripts"
 # Compass Scaffold Output #
 ###########################
 
-# `compass create`
+# After running `compass create` ...
 
 #*********************************************************************
 #Congratulations! Your compass project has been created.
@@ -44,10 +48,10 @@ javascripts_dir = "javascripts"
 #
 #You may now add and edit sass stylesheets in the sass subdirectory of your project.
 #
-#                                                                                                                                  Sass files beginning with an underscore are called partials and won't be
-#compiled to CSS, but they can be imported into other sass stylesheets.
+# Sass files beginning with an underscore are called partials and won't be
+# compiled to CSS, but they can be imported into other sass stylesheets.
 #
-#You can configure your project by editing the config.rb configuration file.
+# You can configure your project by editing the config.rb configuration file.
 #
 #You must compile your sass stylesheets into CSS when they change.
 #This can be done in one of the following ways:
