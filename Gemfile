@@ -24,3 +24,7 @@ gem 'mysql2'                            # database connection
 
 # in report/report_parser/*_parser.rb
 gem 'haml'                              # html templating
+
+# for style/theme architecture
+gem 'sass'
+gem 'compass'
